@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+}
+.main-container{
+    width: 100%;
+}
+
+/*Header and hero styles for desktop*/
+.header-section{
+    height: 550px;
+    position: relative;
+    background-image: url('../images/background-img1.PNG');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.text-info{
+    width: 70%;
+    padding: 40px;
+    color:white;
+    position:absolute;
+    text-align: center;
+    font-size: 2.5rem;
+    top: 25%;
+    left: 19%;
+}
+.info-button{
+    font-size: 15px;
+    background-color: #A1A485;
+    border: none;
+    color: #121607;
+    margin-top:30px;
+    padding: 9px 70px 9px 70px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.info-button:hover{
+    background-color: #121607;
+    color: white;
+}
+
+/*Menu styles and link options*/
+.options-menu{
+    padding: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #121607;
+    color: white;
+    transform: translateY(530px);
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.links ul{
+    margin: 0;
+}
+.links li{
+    list-style: none;
+    float: left;
+    padding: 1rem;
+    text-align: center;
+    border-right-style: solid;
+    border-right-width: 1px;
+
+}
+.links li:hover{
+    color: #A2B29F;
+    cursor: pointer;
+}
+
+/*For the burger menu on mobile screen*/
+.toggle-button{
+    position: absolute;
+    top: .90rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: right;
+}
+.place{
+    padding: 15px;
+}
+
+/*Text info styles below the menu*/
+.subtitle{
+    padding: 9% 20% 5% 20%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.info-site{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+    text-align: justify;
+    
+}
+.description, .activities{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.info-site h3{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.info-site p{
+    font-weight: 580;
+}
+
+/*Styles for carousel section*/
+.carousel-container{
+    position: relative;
+    padding: 10%;
+    padding-top:5%;
+}
+.carousel-element img{
+    width: 100%;
+    height: 380px;
+}
+.carousel-prev, .carousel-next{
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 70px;
+    border: none;
+    top: calc(45% - 35px);
+    line-height: 30px;
+    text-align: center;
+    background: #064420;
+    color: white;
+}
+.carousel-prev{
+    left: 9%;
+    z-index: 1;
+}
+.carousel-next{
+    left: 89%;
+}
+
+/*Styles for contact section*/
+.contact-section{
+    height: 600px;
+    position: relative;
+    background-image: url('../images/footer-img.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color:white;
+    margin-top: 5%;
+}
+.contact-section h1{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.first-part{
+    margin-bottom: 3%;
+}
+.input1, .input2{
+    display: flex;
+}
+input[type="text"]{
+    flex: 2;
+    line-height: 30px;
+    background-color: transparent;
+    border-color: white;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+.second-part{
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 1.5%;
+}
+.email, .phone{
+    width: 50%;
+}
+input[id="email"]{
+    flex:2;
+    margin-right: 5%;
+}
+input[id="msm"]{
+    line-height: 100px;
+}
+.sent-btn{
+    font-size: 15px;
+    background-color: whitesmoke;
+    border: none;
+    color:gray;
+    padding: 9px 70px 9px 70px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+}
+
+
+/*Responsive settings*/
+@media screen and (max-width: 800px) {
+    .text-info{
+        font-size: 1.3rem;
+        top: 30%;
+        width: 100%;
+        left: 0%;
+    }
+    .info-button{
+        font-size: 1.0rem;
+    }
+    .subtitle{
+        padding-top:10%;
+    }
+    .form{
+        display:flex;
+        flex-direction: column;
+    }
+    .toggle-button{
+        display: flex;
+        top:1.2rem;
+    }
+    .links{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .links ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .links li{
+        text-align: center;
+        border-right-style: none;
+    }
+    .place{
+        padding-left:41%;
+    }
+    .links.active ul{
+        display: flex;
+    }
+}
+@media screen and (max-width: 500px) {
+    .info-site{
+        display:flex;
+        flex-direction:column;
+    }
+    .subtitle{
+        font-size: 1.3rem;
+        padding-top: 20%;
+    }
+    .activities{
+        padding-top:5%;
+    }
+    .second-part{
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-prev, .carousel-next{
+        visibility: hidden;
+    }
+    .sent-btn{
+        float:left;
+    }
+    .carousel-element img{
+        height:250px;
+    }
+	.form h1{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .email, .phone{
+        width: 100%;
+    }
+    input[id="email"]{
+        margin-right: 0%;
+    } 
+}
